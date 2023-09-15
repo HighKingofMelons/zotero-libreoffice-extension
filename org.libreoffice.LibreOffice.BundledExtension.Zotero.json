@@ -1,5 +1,6 @@
 {
     "id": "org.libreoffice.LibreOffice.BundledExtension.Zotero",
+    "branch": "stable",
     "runtime": "org.libreoffice.LibreOffice",
     "runtime-version": "stable",
     "sdk": "org.freedesktop.Sdk//20.08",
