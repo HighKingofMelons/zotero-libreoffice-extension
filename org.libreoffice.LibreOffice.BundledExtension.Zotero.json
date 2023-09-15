@@ -1,0 +1,35 @@
+{
+    "id": "org.libreoffice.LibreOffice.BundledExtension.Zotero",
+    "runtime": "org.libreoffice.LibreOffice",
+    "runtime-version": "stable",
+    "sdk": "org.freedesktop.Sdk//20.08",
+    "build-extension": true,
+    "separate-locales": false,
+    "appstream-compose": false,
+    "build-options": {
+        "prefix": "/app/libreoffice/share/extensions/Zotero",
+        "prepend-path": "/app/libreoffice/share/extensions/Zotero/bin"
+    },
+    "modules": [
+        {
+            "name": "zotero-libreoffice-integration",
+            "buildsystem": "simple",
+            "build-commands": [ "unzip -d ${FLATPAK_DEST} install/Zotero_OpenOffice_Integration.oxt" ],
+            "post-install": [ 
+            	"install -Dm644 --target-directory=${FLATPAK_DEST}/share/metainfo org.libreoffice.LibreOffice.BundledExtension.Zotero.metainfo.xml",
+            	"appstream-compose --basename=org.libreoffice.LibreOffice.BundledExtension.Zotero --prefix=${FLATPAK_DEST} --origin=flatpak org.libreoffice.LibreOffice.BundledExtension.Zotero"
+            ],
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://github.com/zotero/zotero-libreoffice-integration.git",
+                    "tag": "6.0.4"
+                },
+                {
+                    "type": "file",
+                    "path": "org.libreoffice.LibreOffice.BundledExtension.Zotero.metainfo.xml"
+                }
+            ]
+        }
+    ]
+}

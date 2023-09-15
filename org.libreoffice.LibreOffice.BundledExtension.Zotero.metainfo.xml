@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="addon">
+  <id>org.libreoffice.LibreOffice.BundledExtension.Zotero</id>
+  
+  <name>Zotero Libreoffice Integration</name>
+  <summary>Use your Zotero Bibliography in Libreoffice</summary>
+  
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>AGPL-3.0-only</project_license>
+  
+  <extends>org.libreoffice.LibreOffice</extends>
+  
+  <description>
+    <p>
+      Use your Zotero Bibliography in Libreoffice
+    </p>
+  </description>
+</component>
+
